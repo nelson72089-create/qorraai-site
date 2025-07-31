@@ -12,7 +12,14 @@ a {
   color: inherit;
 }
 
-/* Header Navigation */
+/* Container */
+.container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Navbar */
 .navbar {
   background: #fff;
   border-bottom: 1px solid #ddd;
@@ -26,8 +33,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .nav-menu ul {
@@ -48,6 +53,7 @@ a {
   color: #007acc;
 }
 
+/* Button */
 .btn.primary-btn {
   background: #007acc;
   color: white;
@@ -61,18 +67,11 @@ a {
   background: #005fa3;
 }
 
-/* Layout Containers */
-.container {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
 /* Hero */
 .hero {
   text-align: center;
+  background-color: #fff;
   padding: 4rem 2rem;
-  background: #ffffff;
 }
 
 .hero h1 {
@@ -94,7 +93,7 @@ a {
   margin-bottom: 1.5rem;
 }
 
-/* Section Styling */
+/* Sections */
 section {
   padding: 4rem 2rem;
   background-color: #f4f4f4;
