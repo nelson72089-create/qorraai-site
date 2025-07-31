@@ -10,17 +10,20 @@
     <style>
       body {
         font-family: 'Inter', sans-serif;
-        color: #111827;
+        background-color: #0f172a;
+        color: #f1f5f9;
         margin: 0;
         padding: 0;
       }
-
-      header {
-        background-color: #ffffff;
-        padding: 1rem 2rem;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      a {
+        color: #60a5fa;
+        text-decoration: none;
       }
-
+      header {
+        background-color: #0f172a;
+        padding: 1rem 2rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      }
       .nav-wrapper {
         display: flex;
         justify-content: space-between;
@@ -28,12 +31,9 @@
         max-width: 1200px;
         margin: 0 auto;
       }
-
       .logo img {
-        height: 56px;
-        margin-left: -10px;
+        height: 64px;
       }
-
       .nav-menu ul {
         display: flex;
         gap: 1.5rem;
@@ -41,49 +41,44 @@
         margin: 0;
         padding: 0;
       }
-
       .nav-menu a {
-        text-decoration: none;
-        color: #111827;
         font-weight: 500;
       }
-
       .btn.primary-btn {
         background-color: #2563eb;
         color: white;
         padding: 0.6rem 1.2rem;
         border-radius: 6px;
         font-weight: 600;
-        text-decoration: none;
+        transition: background 0.3s;
       }
-
+      .btn.primary-btn:hover {
+        background-color: #1d4ed8;
+      }
       .hero {
-        background-color: #f9fafb;
-        padding: 6rem 1rem 5rem;
+        background: linear-gradient(to bottom, #0f172a, #1e293b);
+        padding: 7rem 1rem 5rem;
         text-align: center;
       }
-
       .hero img {
-        max-width: 280px;
+        max-width: 320px;
         height: auto;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
       }
-
       .cta-btn {
         background-color: #2563eb;
         color: white;
         padding: 0.8rem 1.6rem;
         border-radius: 8px;
         font-weight: 600;
-        text-decoration: none;
+        display: inline-block;
+        margin-top: 1.5rem;
       }
-
       .section {
         padding: 4rem 1rem;
         max-width: 1100px;
         margin: 0 auto;
       }
-
       .two-column {
         display: flex;
         flex-wrap: wrap;
@@ -91,84 +86,71 @@
         align-items: center;
         justify-content: space-between;
       }
-
       .text {
         flex: 1 1 48%;
       }
-
       .image {
         flex: 1 1 48%;
         text-align: center;
       }
-
       .cards {
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
         margin-top: 2rem;
       }
-
       .card {
-        background-color: #f3f4f6;
+        background-color: #1e293b;
         border-radius: 12px;
         padding: 1.5rem;
         flex: 1 1 30%;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
       }
-
       ul.bullets {
         padding-left: 1.25rem;
       }
-
       ul.bullets li {
         margin-bottom: 0.5rem;
       }
-
       .contact-form {
         max-width: 700px;
         margin: 0 auto;
       }
-
       .form-row {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
       }
-
       .form-group {
         flex: 1;
         margin-bottom: 1rem;
       }
-
       .form-group.full-width {
         flex: 1 1 100%;
       }
-
       input, textarea {
         width: 100%;
         padding: 0.75rem;
-        border: 1px solid #d1d5db;
+        border: 1px solid #334155;
         border-radius: 6px;
         font-family: inherit;
+        background-color: #0f172a;
+        color: #f1f5f9;
       }
-
       footer {
-        background-color: #f9fafb;
+        background-color: #0f172a;
         padding: 2rem 1rem;
         text-align: center;
         font-size: 0.9rem;
-        color: #6b7280;
+        color: #94a3b8;
       }
-
       @media (max-width: 768px) {
         .two-column {
           flex-direction: column;
         }
-
         .card {
           flex: 1 1 100%;
         }
-
         .form-row {
           flex-direction: column;
         }
@@ -191,152 +173,11 @@
         </nav>
       </div>
     </header>
-
-    <main>
-      <section id="home" class="hero">
-        <img src="qorra-ai-logo.png" alt="Qorra AI Logo" />
-        <h1>Unlock Your Time &amp; Growth</h1>
-        <p>High‑impact AI automation designed for established businesses.</p>
-        <a href="#contact" class="cta-btn">Book a Strategy Call</a>
-      </section>
-
-      <section id="problem" class="section">
-        <div class="two-column">
-          <div class="text">
-            <h2>The Problem</h2>
-            <p>Successful business owners are falling behind because they don’t have time to learn AI—yet they can’t afford not to use it.</p>
-            <ul class="bullets">
-              <li>Wasting hours on manual tasks</li>
-              <li>Leaking leads from slow follow‑up</li>
-              <li>Overwhelmed by tools they don’t understand</li>
-              <li>Needing AI to stay competitive but lacking time to learn it</li>
-            </ul>
-          </div>
-          <div class="image">
-            <img src="assets/automation-robot.png" alt="Automation robot helping with tasks" style="max-width: 100%; height: auto;" />
-          </div>
-        </div>
-      </section>
-
-      <section id="solution" class="section">
-        <div class="text">
-          <h2>Our Solution</h2>
-          <p>Qorra plugs AI into your business workflows so you don’t have to. We automate lead capture, follow‑up, onboarding and client communication while building agents that think, respond and handle tasks for you. We deliver white‑glove service and real outcomes—not hype.</p>
-          <div class="cards">
-            <div class="card">
-              <h3>Hands‑Free Automations</h3>
-              <p>From scheduling to onboarding and follow‑ups, we design and manage automations that reclaim hours every week.</p>
-            </div>
-            <div class="card">
-              <h3>High‑Touch Support</h3>
-              <p>We’re your AI partner, not a DIY tool. Our concierge team sets up, manages and evolves your systems.</p>
-            </div>
-            <div class="card">
-              <h3>Tailored to Your Business</h3>
-              <p>We focus on seasoned professionals who value service over software. Our solutions adapt to your niche and workflow.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="market" class="section">
-        <div class="two-column">
-          <div class="text">
-            <h2>Who We Serve</h2>
-            <p>We specialize in helping high-performing service professionals and operators scale without tech overwhelm.</p>
-            <h3>Industries We Work With</h3>
-            <ul class="bullets">
-              <li>Real estate teams and brokerages focused on lead capture and nurture</li>
-              <li>Financial services firms aiming to streamline onboarding and compliance</li>
-              <li>Law firms optimizing client intake and communication workflows</li>
-              <li>Wellness and medspa clinics automating scheduling and client retention</li>
-              <li>Admin-heavy agencies or consultants looking to reclaim time and reduce churn</li>
-            </ul>
-          </div>
-          <div class="image">
-            <img src="assets/robot-and-man.png" alt="Human and AI collaborating in business" style="max-width: 100%; height: auto;" />
-          </div>
-        </div>
-      </section>
-
-      <section id="packages" class="section">
-        <div class="text">
-          <h2>Packages</h2>
-          <div class="cards">
-            <div class="card">
-              <h3>Set It &amp; Scale</h3>
-              <p>Three done-for-you automations to jump-start your growth. Great for teams looking to reduce manual follow-up.</p>
-              <a href="#contact" class="btn primary-btn">Learn More</a>
-            </div>
-            <div class="card">
-              <h3>Qorra Concierge</h3>
-              <p>Ongoing automation support and hands-on AI agent management for scale-ready teams.</p>
-              <a href="#contact" class="btn primary-btn">Learn More</a>
-            </div>
-            <div class="card">
-              <h3>AI Agent Suite</h3>
-              <p>Coming Q4 2025: A collection of prebuilt autonomous agents managed as a service. Join the waitlist.</p>
-              <a href="#contact" class="btn primary-btn">Join Waitlist</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="why" class="section">
-        <div class="text">
-          <h2>Why Choose Qorra?</h2>
-          <div class="cards">
-            <div class="card">
-              <h3>No Hype, Just Outcomes</h3>
-              <p>We deliver measurable results by plugging AI into your business—no fluff.</p>
-            </div>
-            <div class="card">
-              <h3>White‑Glove Concierge</h3>
-              <p>We set up, manage and evolve your automations so you don’t have to.</p>
-            </div>
-            <div class="card">
-              <h3>Built Like a Partner</h3>
-              <p>We’re here for professionals who missed the tech wave—built like an agency, feels like a partner.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="text">
-          <h2>Get in Touch</h2>
-          <p>Ready to unlock your time? Tell us a bit about yourself and we’ll be in touch.</p>
-          <form id="contactForm" class="contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group full-width">
-                <label for="company">Company Name</label>
-                <input type="text" id="company" name="company" />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group full-width">
-                <label for="message">How can we help you?</label>
-                <textarea id="message" name="message" rows="4" placeholder="Describe your pain points or goals…"></textarea>
-              </div>
-            </div>
-            <button type="submit" class="btn primary-btn">Submit</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2025 Qorra AI. All rights reserved.</p>
-    </footer>
+    <section id="home" class="hero">
+      <img src="qorra-ai-logo.png" alt="Qorra AI Logo" />
+      <h1>Unlock Your Time &amp; Growth</h1>
+      <p>High‑impact AI automation designed for established businesses.</p>
+      <a href="#contact" class="cta-btn">Book a Strategy Call</a>
+    </section>
   </body>
 </html>
