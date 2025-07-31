@@ -345,4 +345,12 @@ img {
   .form-row {
     flex-direction: column;
   }
+}.logo img {
+  max-height: 80px;
+  width: auto;
+  display: block;
+}
+
+.logo {
+  padding: 10px 20px;
 }
