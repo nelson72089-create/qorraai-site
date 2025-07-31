@@ -4,345 +4,118 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qorra AI | Unlock Time & Growth</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
     <style>
       body {
-        font-family: 'Inter', sans-serif;
-        color: #111827;
-        background-color: #ffffff;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0a0a0a;
+        color: #ffffff;
+      }
+      .navbar {
+        background-color: #0a0a0a;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        border-bottom: 1px solid #1f1f1f;
+      }
+      .nav-menu ul {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
         margin: 0;
         padding: 0;
       }
-
-      h1, h2, h3 {
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-      }
-
-      p {
-        line-height: 1.6;
-      }
-
-      .hero {
-        background-color: #f9fafb;
-        padding: 5rem 1rem 4rem;
-        text-align: center;
-      }
-
-      .hero img {
-        max-width: 260px;
-        margin-bottom: 1.5rem;
-      }
-
-      .cta-btn {
-        background-color: #2563eb;
-        color: #fff;
-        padding: 0.8rem 1.6rem;
-        border-radius: 8px;
-        font-weight: 600;
+      .nav-menu a {
         text-decoration: none;
-        transition: background 0.3s ease;
+        color: #ffffff;
+        font-weight: 500;
+        transition: color 0.3s ease;
       }
-
-      .cta-btn:hover {
-        background-color: #1d4ed8;
+      .nav-menu a:hover {
+        color: #00b4d8;
       }
-
-      .section {
-        padding: 4rem 1rem;
+      .btn {
+        background-color: #00b4d8;
+        border: none;
+        padding: 0.6rem 1rem;
+        border-radius: 8px;
+        color: #ffffff;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
       }
-
-      .two-column {
+      .btn:hover {
+        background-color: #009bb8;
+      }
+      .hero {
         display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-      }
-
-      .two-column .text {
-        flex: 1 1 45%;
-      }
-
-      .two-column .image {
-        flex: 1 1 45%;
+        padding: 4rem 2rem;
         text-align: center;
       }
-
-      .cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
+      .hero img {
+        max-width: 100%;
+        height: auto;
         margin-top: 2rem;
       }
-
-      .card {
-        background-color: #f3f4f6;
-        border-radius: 12px;
-        padding: 1.5rem;
-        flex: 1 1 30%;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: auto;
       }
-
-      .card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.75rem;
-      }
-
-      .btn.secondary-btn {
-        background-color: #2563eb;
-        color: white;
-        padding: 0.6rem 1.2rem;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      .btn.secondary-btn:hover {
-        background-color: #1d4ed8;
-      }
-
-      .bullets {
-        padding-left: 1.25rem;
-      }
-
-      .bullets li {
-        margin-bottom: 0.5rem;
-      }
-
-      .contact-form {
-        max-width: 700px;
-        margin: 0 auto;
-      }
-
-      .form-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-
-      .form-group {
-        flex: 1;
+      h1, h2 {
+        font-weight: 700;
         margin-bottom: 1rem;
-      }
-
-      .form-group.full-width {
-        flex: 1 1 100%;
-      }
-
-      input, textarea {
-        width: 100%;
-        padding: 0.75rem;
-        border: 1px solid #d1d5db;
-        border-radius: 6px;
-        font-family: inherit;
-      }
-
-      footer {
-        background-color: #f9fafb;
-        padding: 2rem 1rem;
-        text-align: center;
-        font-size: 0.9rem;
-        color: #6b7280;
-      }
-
-      @media (max-width: 768px) {
-        .two-column {
-          flex-direction: column;
-        }
-
-        .card {
-          flex: 1 1 100%;
-        }
-
-        .form-row {
-          flex-direction: column;
-        }
       }
     </style>
   </head>
   <body>
-   <header class="navbar" style="background-color: #ffffff; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border-bottom: 1px solid #e5e7eb; padding: 1rem 0;">
-  <div class="container" style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 2rem;">
-    <a href="#home" class="logo" style="display: flex; align-items: center;">
-      <img src="qorra-ai-logo.png" alt="Qorra AI logo" style="height: 72px; object-fit: contain;" />
-    </a>
-    <nav class="nav-menu">
-      <ul style="display: flex; gap: 1.75rem; list-style: none; margin: 0; padding: 0; align-items: center;">
-        <li><a href="#solution" style="text-decoration: none; color: #111827;">Solution</a></li>
-        <li><a href="#packages" style="text-decoration: none; color: #111827;">Packages</a></li>
-        <li><a href="#why" style="text-decoration: none; color: #111827;">Why Qorra</a></li>
-        <li><a href="#contact" class="btn primary-btn cta-btn">Get Started</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <header class="navbar">
+      <a href="#home" class="logo">
+        <img src="qorra-ai-logo.png" alt="Qorra AI logo" style="height: 60px;" />
+      </a>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#solution">Solution</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#why">Why Qorra</a></li>
+          <li><a href="#contact" class="btn">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <section class="hero" id="home">
+      <h1>Unlock Time & Growth with AI</h1>
+      <p>Qorra helps business owners automate what they shouldn't be doing manually in 2025.</p>
+      <img src="assets/robot-and-man.png" alt="AI automation illustration" />
+    </section>
 
-    <main>
-      <!-- Hero -->
-      <section id="home" class="hero">
-        <img src="qorra-ai-logo.png" alt="Qorra AI Logo" />
-        <h1>Unlock Your Time &amp; Growth</h1>
-        <p>High‑impact AI automation designed for established businesses.</p>
-        <a href="#contact" class="cta-btn">Book a Strategy Call</a>
-      </section>
+    <section id="solution">
+      <h2>The Solution</h2>
+      <p>We bridge human experience with AI capability to automate workflows, save time, and grow faster — without needing to learn the tech.</p>
+    </section>
 
-      <!-- Problem -->
-      <section id="problem" class="section">
-        <div class="container two-column">
-          <div class="text">
-            <h2>The Problem</h2>
-            <p>Successful business owners are falling behind because they don’t have time to learn AI—yet they can’t afford not to use it.</p>
-            <ul class="bullets">
-              <li>Wasting hours on manual tasks</li>
-              <li>Leaking leads from slow follow‑up</li>
-              <li>Overwhelmed by tools they don’t understand</li>
-              <li>Needing AI to stay competitive but lacking time to learn it</li>
-            </ul>
-          </div>
-          <div class="image">
-            <img src="assets/automation-robot.png" alt="Automation robot helping with tasks" style="max-width: 100%; height: auto;" />
-          </div>
-        </div>
-      </section>
+    <section id="packages">
+      <h2>Packages</h2>
+      <p>Custom automation packages starting at $2,500. Built for impact. Priced for results.</p>
+    </section>
 
-      <!-- Solution -->
-      <section id="solution" class="section">
-        <div class="container">
-          <h2>Our Solution</h2>
-          <p>Qorra plugs AI into your business workflows so you don’t have to. We automate lead capture, follow‑up, onboarding and client communication while building agents that think, respond and handle tasks for you. We deliver white‑glove service and real outcomes—not hype.</p>
-          <div class="cards features">
-            <div class="card">
-              <h3>Hands‑Free Automations</h3>
-              <p>From scheduling to onboarding and follow‑ups, we design and manage automations that reclaim hours every week.</p>
-            </div>
-            <div class="card">
-              <h3>High‑Touch Support</h3>
-              <p>We’re your AI partner, not a DIY tool. Our concierge team sets up, manages and evolves your systems.</p>
-            </div>
-            <div class="card">
-              <h3>Tailored to Your Business</h3>
-              <p>We focus on seasoned professionals who value service over software. Our solutions adapt to your niche and workflow.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section id="why">
+      <h2>Why Qorra</h2>
+      <p>We’re not selling hype. We’re delivering outcomes. Think of us as your AI co-pilot, not your software vendor.</p>
+    </section>
 
-      <!-- Market -->
-      <section id="market" class="section">
-        <div class="container two-column">
-          <div class="text">
-            <h2>Who We Serve</h2>
-            <p>We work with service-based businesses that rely on people, processes, and performance. Our clients want to scale efficiently without getting buried in admin or tech tools they don’t have time to learn.</p>
-
-            <h3>Core Clients</h3>
-            <ul class="bullets">
-              <li>Consultants, advisors, and agency owners</li>
-              <li>Client-first professionals who value outcomes over dashboards</li>
-              <li>Busy operators looking to reclaim time and reduce overhead</li>
-              <li>Service teams seeking smarter, done-for-you automation</li>
-            </ul>
-
-            <h3>Industries We Work With</h3>
-            <ul class="bullets">
-              <li>Real estate teams optimizing lead conversion and transaction flow</li>
-              <li>Financial services firms simplifying intake, compliance, and follow-up</li>
-              <li>Legal teams managing case updates and client communication</li>
-              <li>Medspas, clinics, and wellness centers boosting retention and bookings</li>
-              <li>Operations-heavy agencies streamlining onboarding and client ops</li>
-            </ul>
-          </div>
-          <div class="image">
-            <img src="assets/robot-and-man.png" alt="Human and AI collaborating in business" style="max-width: 100%; height: auto;" />
-          </div>
-        </div>
-      </section>
-
-      <!-- Packages -->
-      <section id="packages" class="section">
-        <div class="container">
-          <h2>Packages</h2>
-          <div class="cards packages">
-            <div class="card">
-              <h3>Set It &amp; Scale</h3>
-              <p>Three done‑for‑you automations to jump‑start your business growth.</p>
-              <a href="#contact" class="btn secondary-btn">Learn More</a>
-            </div>
-            <div class="card">
-              <h3>Qorra Concierge</h3>
-              <p>Monthly updates and hands‑on AI agent management to keep you ahead.</p>
-              <a href="#contact" class="btn secondary-btn">Learn More</a>
-            </div>
-            <div class="card">
-              <h3>AI Agent Suite</h3>
-              <p>Coming Q4 2025: 2–5 prebuilt autonomous agents under a retainer/SaaS model.</p>
-              <a href="#contact" class="btn secondary-btn">Join Waitlist</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Why Qorra -->
-      <section id="why" class="section">
-        <div class="container">
-          <h2>Why Choose Qorra?</h2>
-          <div class="cards why">
-            <div class="card">
-              <h3>No Hype, Just Outcomes</h3>
-              <p>We deliver measurable results by plugging AI into your business—no fluff.</p>
-            </div>
-            <div class="card">
-              <h3>White‑Glove Concierge</h3>
-              <p>We set up, manage and evolve your automations so you don’t have to.</p>
-            </div>
-            <div class="card">
-              <h3>Built Like a Partner</h3>
-              <p>We’re here for smart professionals who missed the tech wave. Built like an agency, feels like a partner, priced like a solution.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="section">
-        <div class="container">
-          <h2>Get in Touch</h2>
-          <p>Ready to unlock your time? Tell us a bit about yourself and we’ll be in touch.</p>
-          <form id="contactForm" class="contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group full-width">
-                <label for="company">Company Name</label>
-                <input type="text" id="company" name="company" />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group full-width">
-                <label for="message">How can we help you?</label>
-                <textarea id="message" name="message" rows="4" placeholder="Describe your pain points or goals…"></textarea>
-              </div>
-            </div>
-            <button type="submit" class="btn primary-btn cta-btn">Submit</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2025 Qorra AI. All rights reserved.</p>
-    </footer>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email us at <a href="mailto:ryannelsoncosprings@gmail.com" style="color:#00b4d8;">ryannelsoncosprings@gmail.com</a> to get started.</p>
+    </section>
   </body>
 </html>
