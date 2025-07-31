@@ -4,45 +4,201 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qorra AI | Unlock Time & Growth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        color: #111827;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1, h2, h3 {
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      .hero {
+        background-color: #f9fafb;
+        padding: 5rem 1rem 4rem;
+        text-align: center;
+      }
+
+      .hero img {
+        max-width: 200px;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-btn {
+        background-color: #2563eb;
+        color: #fff;
+        padding: 0.8rem 1.6rem;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .cta-btn:hover {
+        background-color: #1d4ed8;
+      }
+
+      .section {
+        padding: 4rem 1rem;
+      }
+
+      .two-column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .two-column .text {
+        flex: 1 1 45%;
+      }
+
+      .two-column .image {
+        flex: 1 1 45%;
+        text-align: center;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .card {
+        background-color: #f3f4f6;
+        border-radius: 12px;
+        padding: 1.5rem;
+        flex: 1 1 30%;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      }
+
+      .card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .price {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #2563eb;
+        margin: 0.5rem 0;
+      }
+
+      .btn.secondary-btn {
+        background-color: #2563eb;
+        color: white;
+        padding: 0.6rem 1.2rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .btn.secondary-btn:hover {
+        background-color: #1d4ed8;
+      }
+
+      .bullets {
+        padding-left: 1.25rem;
+      }
+
+      .bullets li {
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-form {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .form-group {
+        flex: 1;
+        margin-bottom: 1rem;
+      }
+
+      .form-group.full-width {
+        flex: 1 1 100%;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        font-family: inherit;
+      }
+
+      footer {
+        background-color: #f9fafb;
+        padding: 2rem 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #6b7280;
+      }
+
+      @media (max-width: 768px) {
+        .two-column {
+          flex-direction: column;
+        }
+
+        .card {
+          flex: 1 1 100%;
+        }
+
+        .form-row {
+          flex-direction: column;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header class="navbar">
-      <div class="container nav-wrapper">
+    <header class="navbar" style="padding: 1rem 2rem;">
+      <div class="container nav-wrapper" style="display: flex; justify-content: space-between; align-items: center;">
         <a href="#home" class="logo">
-          <img src="qorra-ai-logo.png" alt="Qorra AI logo" style="height: 60px;" />
+          <img src="qorra-ai-logo.png" alt="Qorra AI logo" style="height: 48px;" />
         </a>
         <nav class="nav-menu">
-          <ul>
+          <ul style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0;">
             <li><a href="#solution">Solution</a></li>
             <li><a href="#packages">Packages</a></li>
             <li><a href="#why">Why Qorra</a></li>
-            <li><a href="#contact" class="btn primary-btn">Get Started</a></li>
+            <li><a href="#contact" class="btn primary-btn cta-btn">Get Started</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <!-- Hero Section -->
-      <section id="home" class="hero" style="background-color: #ffffff;">
-        <div class="container hero-content" style="text-align: center; padding: 3rem 1rem;">
-          <img
-            src="qorra-ai-logo.png"
-            alt="Qorra AI Logo"
-            style="max-width: 200px; height: auto; margin-bottom: 1.25rem;"
-          />
-          <h1 style="margin-bottom: 0.5rem;">Unlock Your Time &amp; Growth</h1>
-          <p style="font-size: 1.1rem; color: #444; margin-bottom: 1.5rem;">
-            High‑impact AI automation designed for established businesses.
-          </p>
-          <a href="#contact" class="btn cta-btn">Book a Strategy Call</a>
-        </div>
+      <!-- Hero -->
+      <section id="home" class="hero">
+        <img src="qorra-ai-logo.png" alt="Qorra AI Logo" />
+        <h1>Unlock Your Time &amp; Growth</h1>
+        <p>High‑impact AI automation designed for established businesses.</p>
+        <a href="#contact" class="cta-btn">Book a Strategy Call</a>
       </section>
 
-      <!-- Problem Section -->
-      <section id="problem" class="section problem-section">
+      <!-- Problem -->
+      <section id="problem" class="section">
         <div class="container two-column">
           <div class="text">
             <h2>The Problem</h2>
@@ -54,14 +210,14 @@
               <li>Needing AI to stay competitive but lacking time to learn it</li>
             </ul>
           </div>
-          <div class="image" style="text-align: center;">
-            <img src="assets/automation-robot.png" alt="Automation robot helping with tasks" style="max-width: 400px; height: auto;" />
+          <div class="image">
+            <img src="assets/automation-robot.png" alt="Automation robot helping with tasks" style="max-width: 100%; height: auto;" />
           </div>
         </div>
       </section>
 
-      <!-- Solution Section -->
-      <section id="solution" class="section solution-section">
+      <!-- Solution -->
+      <section id="solution" class="section">
         <div class="container">
           <h2>Our Solution</h2>
           <p>Qorra plugs AI into your business workflows so you don’t have to. We automate lead capture, follow‑up, onboarding and client communication while building agents that think, respond and handle tasks for you. We deliver white‑glove service and real outcomes—not hype.</p>
@@ -82,8 +238,8 @@
         </div>
       </section>
 
-      <!-- Target Market Section -->
-      <section id="market" class="section market-section">
+      <!-- Market -->
+      <section id="market" class="section">
         <div class="container two-column">
           <div class="text">
             <h2>Who We Serve</h2>
@@ -106,14 +262,14 @@
               <li>Admin-heavy businesses ready to streamline operations</li>
             </ul>
           </div>
-          <div class="image" style="text-align: center;">
-            <img src="assets/robot-and-man.png" alt="Human and AI collaborating in business" style="max-width: 400px; height: auto;" />
+          <div class="image">
+            <img src="assets/robot-and-man.png" alt="Human and AI collaborating in business" style="max-width: 100%; height: auto;" />
           </div>
         </div>
       </section>
 
-      <!-- Packages Section -->
-      <section id="packages" class="section packages-section">
+      <!-- Packages -->
+      <section id="packages" class="section">
         <div class="container">
           <h2>Packages</h2>
           <div class="cards packages">
@@ -139,8 +295,8 @@
         </div>
       </section>
 
-      <!-- Why Qorra Section -->
-      <section id="why" class="section why-section">
+      <!-- Why Qorra -->
+      <section id="why" class="section">
         <div class="container">
           <h2>Why Choose Qorra?</h2>
           <div class="cards why">
@@ -160,8 +316,8 @@
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="section contact-section">
+      <!-- Contact -->
+      <section id="contact" class="section">
         <div class="container">
           <h2>Get in Touch</h2>
           <p>Ready to unlock your time? Tell us a bit about yourself and we’ll be in touch.</p>
@@ -188,16 +344,14 @@
                 <textarea id="message" name="message" rows="4" placeholder="Describe your pain points or goals…"></textarea>
               </div>
             </div>
-            <button type="submit" class="btn primary-btn">Submit</button>
+            <button type="submit" class="btn primary-btn cta-btn">Submit</button>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-content">
-        <p>&copy; 2025 Qorra AI. All rights reserved.</p>
-      </div>
+    <footer>
+      <p>&copy; 2025 Qorra AI. All rights reserved.</p>
     </footer>
   </body>
 </html>
