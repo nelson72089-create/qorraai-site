@@ -6,48 +6,116 @@
     <title>Qorra AI | Unlock Time & Growth</title>
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0a0a0a;
+        color: #ffffff;
+      }
+      .navbar {
+        background-color: #0a0a0a;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        border-bottom: 1px solid #1f1f1f;
+      }
+      .nav-menu ul {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-menu a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      .nav-menu a:hover {
+        color: #00b4d8;
+      }
+      .btn {
+        background-color: #00b4d8;
+        border: none;
+        padding: 0.6rem 1rem;
+        border-radius: 8px;
+        color: #ffffff;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      .btn:hover {
+        background-color: #009bb8;
+      }
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+      .hero img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 2rem;
+      }
+      section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: auto;
+      }
+      h1, h2 {
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+    </style>
   </head>
   <body>
     <header class="navbar">
-      <div class="container nav-wrapper">
-        <a href="#home" class="logo">
-          <img src="qorra-ai-logo.png" alt="Qorra AI logo" style="height: 60px;" />
-        </a>
-        <nav class="nav-menu">
-          <ul>
-            <li><a href="#solution">Solution</a></li>
-            <li><a href="#packages">Packages</a></li>
-            <li><a href="#why">Why Qorra</a></li>
-            <li><a href="#contact" class="btn primary-btn">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+      <a href="#home" class="logo">
+        <img src="qorra-ai-logo.png" alt="Qorra AI logo" style="height: 60px;" />
+      </a>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#solution">Solution</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#why">Why Qorra</a></li>
+          <li><a href="#contact" class="btn">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section class="hero" id="home">
       <h1>Unlock Time & Growth with AI</h1>
-      <p>Qorra empowers business owners to automate the tasks they shouldn't be doing manually in 2025.</p>
+      <p>Qorra helps business owners automate what they shouldn't be doing manually in 2025.</p>
       <img src="assets/robot-and-man.png" alt="AI automation illustration" />
     </section>
 
     <section id="solution">
       <h2>The Solution</h2>
-      <p>We combine your human insight with our automation expertise to remove bottlenecks, follow up with leads automatically, and turn wasted hours into growth.</p>
+      <p>We bridge human experience with AI capability to automate workflows, save time, and grow faster — without needing to learn the tech.</p>
     </section>
 
     <section id="packages">
       <h2>Packages</h2>
-      <p>From one-off workflow automations to fully managed AI agents — we offer hands-on packages starting at $2,500 with done-for-you delivery.</p>
+      <p>Custom automation packages starting at $2,500. Built for impact. Priced for results.</p>
     </section>
 
     <section id="why">
       <h2>Why Qorra</h2>
-      <p>We’re not here to pitch hype. We’re here to deliver measurable outcomes. Think of us as your AI co-pilot — the partner helping you stay relevant, save time, and scale effortlessly.</p>
+      <p>We’re not selling hype. We’re delivering outcomes. Think of us as your AI co-pilot, not your software vendor.</p>
     </section>
 
     <section id="contact">
-      <h2>Get in Touch</h2>
-      <p>Ready to automate the boring stuff? Email us at <a href="mailto:ryannelsoncosprings@gmail.com">ryannelsoncosprings@gmail.com</a> to start your Qorra transformation.</p>
+      <h2>Contact Us</h2>
+      <p>Email us at <a href="mailto:ryannelsoncosprings@gmail.com" style="color:#00b4d8;">ryannelsoncosprings@gmail.com</a> to get started.</p>
     </section>
   </body>
 </html>
