@@ -7,52 +7,81 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
     <style>
       body {
         font-family: 'Inter', sans-serif;
         color: #111827;
-        background-color: #ffffff;
         margin: 0;
         padding: 0;
       }
 
-      h1, h2, h3 {
-        font-weight: 700;
-        margin-bottom: 0.5rem;
+      header {
+        background-color: #ffffff;
+        padding: 1rem 2rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
       }
 
-      p {
-        line-height: 1.6;
+      .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo img {
+        height: 56px;
+        margin-left: -10px;
+      }
+
+      .nav-menu ul {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-menu a {
+        text-decoration: none;
+        color: #111827;
+        font-weight: 500;
+      }
+
+      .btn.primary-btn {
+        background-color: #2563eb;
+        color: white;
+        padding: 0.6rem 1.2rem;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
       }
 
       .hero {
         background-color: #f9fafb;
-        padding: 5rem 1rem 4rem;
+        padding: 6rem 1rem 5rem;
         text-align: center;
       }
 
       .hero img {
-        max-width: 200px;
+        max-width: 280px;
+        height: auto;
         margin-bottom: 1.5rem;
       }
 
       .cta-btn {
         background-color: #2563eb;
-        color: #fff;
+        color: white;
         padding: 0.8rem 1.6rem;
         border-radius: 8px;
         font-weight: 600;
         text-decoration: none;
-        transition: background 0.3s ease;
-      }
-
-      .cta-btn:hover {
-        background-color: #1d4ed8;
       }
 
       .section {
         padding: 4rem 1rem;
+        max-width: 1100px;
+        margin: 0 auto;
       }
 
       .two-column {
@@ -63,12 +92,12 @@
         justify-content: space-between;
       }
 
-      .two-column .text {
-        flex: 1 1 45%;
+      .text {
+        flex: 1 1 48%;
       }
 
-      .two-column .image {
-        flex: 1 1 45%;
+      .image {
+        flex: 1 1 48%;
         text-align: center;
       }
 
@@ -84,39 +113,14 @@
         border-radius: 12px;
         padding: 1.5rem;
         flex: 1 1 30%;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
       }
 
-      .card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.75rem;
-      }
-
-      .price {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: #2563eb;
-        margin: 0.5rem 0;
-      }
-
-      .btn.secondary-btn {
-        background-color: #2563eb;
-        color: white;
-        padding: 0.6rem 1.2rem;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      .btn.secondary-btn:hover {
-        background-color: #1d4ed8;
-      }
-
-      .bullets {
+      ul.bullets {
         padding-left: 1.25rem;
       }
 
-      .bullets li {
+      ul.bullets li {
         margin-bottom: 0.5rem;
       }
 
@@ -172,24 +176,23 @@
     </style>
   </head>
   <body>
-    <header class="navbar" style="padding: 1rem 2rem;">
-      <div class="container nav-wrapper" style="display: flex; justify-content: space-between; align-items: center;">
+    <header>
+      <div class="nav-wrapper">
         <a href="#home" class="logo">
-          <img src="qorra-ai-logo.png" alt="Qorra AI logo" style="height: 48px;" />
+          <img src="qorra-ai-logo.png" alt="Qorra AI logo" />
         </a>
         <nav class="nav-menu">
-          <ul style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0;">
+          <ul>
             <li><a href="#solution">Solution</a></li>
             <li><a href="#packages">Packages</a></li>
             <li><a href="#why">Why Qorra</a></li>
-            <li><a href="#contact" class="btn primary-btn cta-btn">Get Started</a></li>
+            <li><a href="#contact" class="btn primary-btn">Get Started</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <!-- Hero -->
       <section id="home" class="hero">
         <img src="qorra-ai-logo.png" alt="Qorra AI Logo" />
         <h1>Unlock Your Time &amp; Growth</h1>
@@ -197,9 +200,8 @@
         <a href="#contact" class="cta-btn">Book a Strategy Call</a>
       </section>
 
-      <!-- Problem -->
       <section id="problem" class="section">
-        <div class="container two-column">
+        <div class="two-column">
           <div class="text">
             <h2>The Problem</h2>
             <p>Successful business owners are falling behind because they don’t have time to learn AI—yet they can’t afford not to use it.</p>
@@ -216,12 +218,11 @@
         </div>
       </section>
 
-      <!-- Solution -->
       <section id="solution" class="section">
-        <div class="container">
+        <div class="text">
           <h2>Our Solution</h2>
           <p>Qorra plugs AI into your business workflows so you don’t have to. We automate lead capture, follow‑up, onboarding and client communication while building agents that think, respond and handle tasks for you. We deliver white‑glove service and real outcomes—not hype.</p>
-          <div class="cards features">
+          <div class="cards">
             <div class="card">
               <h3>Hands‑Free Automations</h3>
               <p>From scheduling to onboarding and follow‑ups, we design and manage automations that reclaim hours every week.</p>
@@ -238,28 +239,18 @@
         </div>
       </section>
 
-      <!-- Market -->
       <section id="market" class="section">
-        <div class="container two-column">
+        <div class="two-column">
           <div class="text">
             <h2>Who We Serve</h2>
-            <p>We work with service-based businesses that rely on people, processes, and performance. Our clients want to scale efficiently without getting buried in admin or tech tools they don’t have time to learn.</p>
-
-            <h3>Core Clients</h3>
+            <p>We specialize in helping high-performing service professionals and operators scale without tech overwhelm.</p>
+            <h3>Industries We Work With</h3>
             <ul class="bullets">
-              <li>Consultants, advisors, and agency owners</li>
-              <li>Client-first professionals who value outcomes over dashboards</li>
-              <li>Busy operators looking to reclaim time and reduce overhead</li>
-              <li>Service teams seeking smarter, done-for-you automation</li>
-            </ul>
-
-            <h3>Specialized Industries</h3>
-            <ul class="bullets">
-              <li>Real estate brokerages and high-volume agents</li>
-              <li>Insurance and financial services professionals</li>
-              <li>Legal teams and boutique law firms</li>
-              <li>Medspa, wellness, and aesthetic clinics</li>
-              <li>Admin-heavy businesses ready to streamline operations</li>
+              <li>Real estate teams and brokerages focused on lead capture and nurture</li>
+              <li>Financial services firms aiming to streamline onboarding and compliance</li>
+              <li>Law firms optimizing client intake and communication workflows</li>
+              <li>Wellness and medspa clinics automating scheduling and client retention</li>
+              <li>Admin-heavy agencies or consultants looking to reclaim time and reduce churn</li>
             </ul>
           </div>
           <div class="image">
@@ -268,38 +259,33 @@
         </div>
       </section>
 
-      <!-- Packages -->
       <section id="packages" class="section">
-        <div class="container">
+        <div class="text">
           <h2>Packages</h2>
-          <div class="cards packages">
+          <div class="cards">
             <div class="card">
               <h3>Set It &amp; Scale</h3>
-              <p class="price">$2,500</p>
-              <p>Three done‑for‑you automations to jump‑start your business growth.</p>
-              <a href="#contact" class="btn secondary-btn">Get Started</a>
+              <p>Three done-for-you automations to jump-start your growth. Great for teams looking to reduce manual follow-up.</p>
+              <a href="#contact" class="btn primary-btn">Learn More</a>
             </div>
             <div class="card">
               <h3>Qorra Concierge</h3>
-              <p class="price">$750/mo</p>
-              <p>Monthly updates and hands‑on AI agent management to keep you ahead.</p>
-              <a href="#contact" class="btn secondary-btn">Subscribe</a>
+              <p>Ongoing automation support and hands-on AI agent management for scale-ready teams.</p>
+              <a href="#contact" class="btn primary-btn">Learn More</a>
             </div>
             <div class="card">
               <h3>AI Agent Suite</h3>
-              <p class="price">$1.5–3K/mo</p>
-              <p>Coming Q4 2025: 2–5 prebuilt autonomous agents under a retainer/SaaS model.</p>
-              <a href="#contact" class="btn secondary-btn">Join Waitlist</a>
+              <p>Coming Q4 2025: A collection of prebuilt autonomous agents managed as a service. Join the waitlist.</p>
+              <a href="#contact" class="btn primary-btn">Join Waitlist</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Why Qorra -->
       <section id="why" class="section">
-        <div class="container">
+        <div class="text">
           <h2>Why Choose Qorra?</h2>
-          <div class="cards why">
+          <div class="cards">
             <div class="card">
               <h3>No Hype, Just Outcomes</h3>
               <p>We deliver measurable results by plugging AI into your business—no fluff.</p>
@@ -310,15 +296,14 @@
             </div>
             <div class="card">
               <h3>Built Like a Partner</h3>
-              <p>We’re here for smart professionals who missed the tech wave. Built like an agency, feels like a partner, priced like a solution.</p>
+              <p>We’re here for professionals who missed the tech wave—built like an agency, feels like a partner.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Contact -->
       <section id="contact" class="section">
-        <div class="container">
+        <div class="text">
           <h2>Get in Touch</h2>
           <p>Ready to unlock your time? Tell us a bit about yourself and we’ll be in touch.</p>
           <form id="contactForm" class="contact-form">
@@ -344,7 +329,7 @@
                 <textarea id="message" name="message" rows="4" placeholder="Describe your pain points or goals…"></textarea>
               </div>
             </div>
-            <button type="submit" class="btn primary-btn cta-btn">Submit</button>
+            <button type="submit" class="btn primary-btn">Submit</button>
           </form>
         </div>
       </section>
