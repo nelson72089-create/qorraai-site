@@ -354,3 +354,10 @@ img {
 .logo {
   padding: 10px 20px;
 }
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
