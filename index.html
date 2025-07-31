@@ -5,82 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qorra AI | Unlock Time & Growth</title>
     <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-      body {
+      /* Base Styling */
+      * {
         margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #0a0a0a;
-        color: #ffffff;
+        padding: 0;
+        box-sizing: border-box;
       }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0a0a0a;
+        color: #eaeaea;
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* Navbar */
       .navbar {
         background-color: #0a0a0a;
         padding: 1rem 2rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid #1f1f1f;
         position: sticky;
         top: 0;
         z-index: 999;
-        border-bottom: 1px solid #1f1f1f;
       }
+
+      .logo img {
+        height: 50px;
+      }
+
       .nav-menu ul {
         display: flex;
         list-style: none;
-        gap: 1.5rem;
-        margin: 0;
-        padding: 0;
+        gap: 2rem;
       }
+
       .nav-menu a {
-        text-decoration: none;
-        color: #ffffff;
         font-weight: 500;
         transition: color 0.3s ease;
       }
+
       .nav-menu a:hover {
         color: #00b4d8;
       }
+
       .btn {
         background-color: #00b4d8;
         border: none;
-        padding: 0.6rem 1rem;
-        border-radius: 8px;
-        color: #ffffff;
-        font-weight: bold;
-        cursor: pointer;
-        text-decoration: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 12px;
+        color: #fff;
+        font-weight: 600;
         transition: background-color 0.3s ease;
       }
+
       .btn:hover {
         background-color: #009bb8;
       }
+
+      /* Hero */
       .hero {
+        height: 100vh;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        padding: 4rem 2rem;
         text-align: center;
+        padding: 0 2rem;
+        background: linear-gradient(to bottom, #0a0a0a, #121212);
       }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        max-width: 800px;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        margin: 1rem 0 2rem;
+        max-width: 600px;
+        color: #cfcfcf;
+      }
+
       .hero img {
-        max-width: 100%;
-        height: auto;
+        max-width: 500px;
+        width: 100%;
         margin-top: 2rem;
       }
+
+      /* Sections */
       section {
-        padding: 4rem 2rem;
-        max-width: 1200px;
+        padding: 6rem 2rem;
+        max-width: 1100px;
         margin: auto;
       }
-      h1, h2 {
+
+      section:nth-child(even) {
+        background-color: #101010;
+      }
+
+      h2 {
+        font-size: 2rem;
         font-weight: 700;
         margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.125rem;
+        color: #cccccc;
+      }
+
+      /* Contact */
+      #contact a {
+        color: #00b4d8;
+        font-weight: 600;
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .nav-menu ul {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
       }
     </style>
   </head>
   <body>
     <header class="navbar">
       <a href="#home" class="logo">
-        <img src="qorra-ai-logo.png" alt="Qorra AI logo" style="height: 60px;" />
+        <img src="qorra-ai-logo.png" alt="Qorra AI logo" />
       </a>
       <nav class="nav-menu">
         <ul>
@@ -94,28 +166,28 @@
 
     <section class="hero" id="home">
       <h1>Unlock Time & Growth with AI</h1>
-      <p>Qorra helps business owners automate what they shouldn't be doing manually in 2025.</p>
+      <p>Qorra empowers business owners to automate the tasks they shouldn't be doing manually in 2025.</p>
       <img src="assets/robot-and-man.png" alt="AI automation illustration" />
     </section>
 
     <section id="solution">
       <h2>The Solution</h2>
-      <p>We bridge human experience with AI capability to automate workflows, save time, and grow faster — without needing to learn the tech.</p>
+      <p>We combine your human insight with our automation expertise to remove the bottlenecks, follow up with leads automatically, and turn wasted hours into growth.</p>
     </section>
 
     <section id="packages">
       <h2>Packages</h2>
-      <p>Custom automation packages starting at $2,500. Built for impact. Priced for results.</p>
+      <p>From one-off workflow automations to fully managed AI agents — we offer hands-on packages starting at $2,500 with done-for-you delivery.</p>
     </section>
 
     <section id="why">
       <h2>Why Qorra</h2>
-      <p>We’re not selling hype. We’re delivering outcomes. Think of us as your AI co-pilot, not your software vendor.</p>
+      <p>We’re not here to pitch hype. We’re here to deliver measurable outcomes. Think of us as your AI co-pilot — the partner helping you stay relevant, save time, and scale effortlessly.</p>
     </section>
 
     <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Email us at <a href="mailto:ryannelsoncosprings@gmail.com" style="color:#00b4d8;">ryannelsoncosprings@gmail.com</a> to get started.</p>
+      <h2>Get in Touch</h2>
+      <p>Ready to automate the boring stuff? Email us at <a href="mailto:ryannelsoncosprings@gmail.com">ryannelsoncosprings@gmail.com</a> to start your Qorra transformation.</p>
     </section>
   </body>
 </html>
