@@ -1,3 +1,5 @@
+/** Qorra AI Site - Final Polished Styles */
+
 /* Base */
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -17,6 +19,7 @@ body {
 .navbar {
   padding: 20px 0;
   background-color: #0d1117;
+  border-bottom: 1px solid #1a1f25;
 }
 
 .nav-wrapper {
@@ -26,14 +29,16 @@ body {
 }
 
 .logo img {
-  height: 60px;
+  height: 48px;
 }
 
 .nav-menu ul {
   display: flex;
+  align-items: center;
   gap: 20px;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .nav-menu a {
@@ -44,7 +49,7 @@ body {
 
 /* Hero */
 .hero {
-  padding: 80px 0 100px;
+  padding: 120px 0 100px;
 }
 
 .hero-content {
@@ -52,7 +57,7 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .hero-text {
@@ -60,13 +65,20 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-logo img.hero-image {
-  height: 200px;
+  height: 240px;
   max-width: 100%;
   object-fit: contain;
 }
@@ -75,9 +87,10 @@ body {
 .two-column {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 60px;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 40px;
 }
 
 .text {
@@ -89,19 +102,20 @@ body {
   flex: 1 1 35%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .image img {
-  max-width: 280px;
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: 320px;
   border-radius: 12px;
   object-fit: contain;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
 }
 
 img.tall-image {
-  max-height: 380px;
-  margin-top: 20px;
+  max-height: 420px;
+  margin-top: 10px;
 }
 
 /* Bullets */
@@ -128,6 +142,7 @@ img.tall-image {
   border-radius: 12px;
   flex: 1 1 300px;
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
@@ -149,7 +164,7 @@ img.tall-image {
   text-align: center;
   transition: background 0.3s ease, box-shadow 0.3s ease;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(56,189,248,0.2);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
 }
 
 .btn:hover {
@@ -164,6 +179,7 @@ img.tall-image {
 /* Contact */
 .wide-contact .container {
   max-width: 900px;
+  padding-bottom: 40px;
 }
 
 /* Footer */
@@ -173,6 +189,7 @@ img.tall-image {
   padding: 40px 0;
   font-size: 0.9rem;
   color: #888;
+  border-top: 1px solid #1a1f25;
 }
 
 .footer-content img {
