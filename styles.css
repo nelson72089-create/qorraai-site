@@ -234,3 +234,7 @@ img.tall-image {
   height: 32px;
   margin-bottom: 10px;
 }
+/* Fix: Add spacing before Problem section */
+#problem {
+  padding-top: 60px;
+}
