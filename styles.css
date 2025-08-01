@@ -182,6 +182,40 @@ img.tall-image {
   padding-bottom: 40px;
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  margin-top: 6px;
+  background-color: #1a1f25;
+  color: #fff;
+  width: 100%;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #38bdf8;
+  background-color: #11151a;
+}
+
 /* Footer */
 .footer {
   background-color: #0d1117;
