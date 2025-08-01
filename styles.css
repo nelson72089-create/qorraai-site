@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-color: #0d1117;
   color: #ffffff;
-  line-height: 1.75; /* NEW: Improved readability across all text */
+  line-height: 1.75;
 }
 
 .container {
@@ -48,7 +48,14 @@ body {
 
 /* Hero */
 .hero {
-  padding: 100px 0 100px; /* CHANGED: reduced top padding from 120px → 100px */
+  padding: 80px 0 80px;
+}
+
+.hero-box {
+  background-color: #161b22;
+  padding: 60px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content {
@@ -77,7 +84,7 @@ body {
 }
 
 .hero-logo img.hero-image {
-  height: 280px; /* CHANGED: was 320px, now matches content flow better */
+  height: 280px;
   max-width: 100%;
   object-fit: contain;
 }
@@ -102,7 +109,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 20px; /* CHANGED: from 40px to 20px */
+  margin-top: 20px;
 }
 
 .image img {
@@ -183,7 +190,7 @@ img.tall-image {
   background-color: #161b22;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  margin-top: 40px; /* CHANGED: was 60px */
+  margin-top: 40px;
 }
 
 .contact-form {
@@ -233,8 +240,4 @@ img.tall-image {
 .footer-content img {
   height: 32px;
   margin-bottom: 10px;
-}
-/* Fix: Add spacing before Problem section */
-#problem {
-  padding-top: 60px;
 }
