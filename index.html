@@ -6,7 +6,30 @@
     <title>Qorra AI | Unlock Time & Growth</title>
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
+    <style>
+      .problem-section img,
+      .market-section img {
+        max-width: 420px;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .hero-content img {
+        height: 100px;
+        margin-bottom: 1.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero-content img {
+          height: 80px;
+        }
+      }
+    </style>
   </head>
+
   <body>
     <header class="navbar">
       <div class="container nav-wrapper">
@@ -28,7 +51,7 @@
       <!-- Hero Section -->
       <section id="home" class="hero">
         <div class="container hero-content">
-          <img src="qorra-ai-logo.png" alt="Qorra AI logo" style="height: 140px; margin-bottom: 1.5rem;" />
+          <img src="qorra-ai-logo.png" alt="Qorra AI logo" />
           <h1>Unlock Your Time & Growth</h1>
           <p>High-impact AI automation designed for established businesses.</p>
           <a href="#contact" class="btn cta-btn">Book a Strategy Call</a>
@@ -49,7 +72,7 @@
             </ul>
           </div>
           <div class="image">
-            <img src="assets/automation-robot.png" alt="Problem illustration" style="max-width: 100%; height: auto; border-radius: 10px;" />
+            <img src="assets/automation-robot.png" alt="Problem illustration" />
           </div>
         </div>
       </section>
@@ -99,7 +122,7 @@
             </ul>
           </div>
           <div class="image">
-            <img src="assets/robot-and-man.png" alt="Target market illustration" style="max-width: 100%; height: auto; border-radius: 10px;" />
+            <img src="assets/robot-and-man.png" alt="Target market illustration" />
           </div>
         </div>
       </section>
