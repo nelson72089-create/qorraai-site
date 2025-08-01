@@ -241,3 +241,46 @@ img.tall-image {
   height: 32px;
   margin-bottom: 10px;
 }
+/* ============================== */
+/* MOBILE ENHANCEMENTS */
+/* ============================== */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-logo img.hero-image {
+    height: 220px;
+  }
+
+  .nav-menu ul {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  .contact-form {
+    gap: 16px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+}
