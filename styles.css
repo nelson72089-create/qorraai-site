@@ -142,3 +142,44 @@ a {
   font-size: 0.9rem;
   color: #888;
 }
+.problem-section .image img,
+.market-section .image img {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.problem-section .text,
+.market-section .text {
+  flex: 1 1 60%;
+  min-width: 280px;
+}
+
+.problem-section .image,
+.market-section .image {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.bullets {
+  padding-left: 20px;
+  margin: 10px 0 20px;
+}
+
+.bullets li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
